@@ -1,0 +1,7 @@
+
+@interface __project
+{
+
+}
+
+@end

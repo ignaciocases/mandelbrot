@@ -1,0 +1,7 @@
+
+@interface HNPaneLayer : CALayer
+{
+
+}
+
+@end

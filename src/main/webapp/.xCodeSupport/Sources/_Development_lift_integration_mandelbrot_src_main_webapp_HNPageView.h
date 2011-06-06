@@ -1,0 +1,7 @@
+
+@interface HNPageView : NSView
+{
+
+}
+
+@end

@@ -1,0 +1,25 @@
+<lift:surround with="default" at="content">
+  <h2>Welcome to your project!</h2>
+
+	<div class="lift:LazyLoad">
+		<!-- <lift:CreateImage.renderFractal>
+			<p>Create Image</p>
+			<img href=""/>		
+		</lift:CreateImage.renderFractal> -->
+
+		<lift:Listing.generateImage form="POST">
+			<input type="submit" value="Generate"/>
+		</lift:Listing.generateImage>
+	
+	<lift:Listing.summary>
+		<h2 id="title"></h2>
+		<p id="description"></p>
+		<br/>
+		<img id="img"/>
+		<br/>
+	</lift:Listing.summary>
+	
+	
+	</div>
+	
+</lift:surround>
