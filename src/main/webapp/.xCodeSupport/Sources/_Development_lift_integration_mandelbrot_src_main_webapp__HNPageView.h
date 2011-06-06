@@ -1,7 +1,0 @@
-
-@interface HNPageView : NSView
-{
-
-}
-
-@end

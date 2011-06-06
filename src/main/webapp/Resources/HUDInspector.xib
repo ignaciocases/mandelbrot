@@ -322,11 +322,11 @@
 							<reference key="NSNextKeyView" ref="958280331"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="635162019">
-								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags">-2079981824</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents"/>
 								<reference key="NSControlView" ref="469116930"/>
-								<double key="NSMaxValue">100</double>
+								<double key="NSMaxValue">360</double>
 								<double key="NSMinValue">0.0</double>
 								<double key="NSValue">0.0</double>
 								<double key="NSAltIncValue">0.0</double>
@@ -345,13 +345,13 @@
 							<reference key="NSNextKeyView" ref="955692600"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="972474495">
-								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags">-2079981824</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents"/>
 								<reference key="NSControlView" ref="961526402"/>
-								<double key="NSMaxValue">100</double>
-								<double key="NSMinValue">0.0</double>
-								<double key="NSValue">50</double>
+								<double key="NSMaxValue">200</double>
+								<double key="NSMinValue">50</double>
+								<double key="NSValue">100</double>
 								<double key="NSAltIncValue">0.0</double>
 								<int key="NSNumberOfTickMarks">0</int>
 								<int key="NSTickMarkPosition">1</int>
@@ -442,7 +442,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="165276575">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">100%</string>
+								<string key="NSContents">200%</string>
 								<reference key="NSSupport" ref="24"/>
 								<reference key="NSControlView" ref="955692600"/>
 								<reference key="NSBackgroundColor" ref="958010494"/>
@@ -528,14 +528,11 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="891690549"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMaxSize">{1e+13, 1e+13}</string>
 			</object>
 			<object class="NSCustomObject" id="421175367">
 				<string key="NSClassName">HNFractalInspector</string>
-			</object>
-			<object class="NSCustomObject" id="691184734">
-				<string key="NSClassName">HNPaneLayer</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -580,14 +577,6 @@
 						<reference key="destination" ref="713010121"/>
 					</object>
 					<int key="connectionID">49</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">paneLayer</string>
-						<reference key="source" ref="421175367"/>
-						<reference key="destination" ref="691184734"/>
-					</object>
-					<int key="connectionID">51</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -912,11 +901,6 @@
 						<reference key="object" ref="421175367"/>
 						<reference key="parent" ref="0"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">50</int>
-						<reference key="object" ref="691184734"/>
-						<reference key="parent" ref="0"/>
-					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -965,7 +949,6 @@
 					<string>41.IBPluginDependency</string>
 					<string>42.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
-					<string>50.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -1000,7 +983,6 @@
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

@@ -20,7 +20,7 @@
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     AppController.instance = self;
-    CPLogRegister(CPLogPopup);
+    //CPLogRegister(CPLogPopup);
 
     // GUI settings
     var contentView = [theWindow contentView];

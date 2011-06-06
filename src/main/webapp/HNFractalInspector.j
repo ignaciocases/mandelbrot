@@ -20,12 +20,12 @@ var FractalInspectorSharedInstance = nil;
     IBOutlet CPSlider qMinSlider;
     IBOutlet CPSlider qMaxSlider;
     
-    IBOutlet HNPaneLayer paneLayer;
+    HNPaneLayer paneLayer @accessors;
 }
 
 + (HNFractalInspector)sharedFractalInspector {
     if (!FractalInspectorSharedInstance) {
-        FractalInspectorSharedInstance = [[HNFractalInspector alloc] initWithWindowCibName:@"HUDInspector" owner:self];
+        FractalInspectorSharedInstance = [[HNFractalInspector alloc] initWithWindowCibName:@"HUDInspector"];
     }
     return FractalInspectorSharedInstance;
 }
@@ -51,27 +51,35 @@ var FractalInspectorSharedInstance = nil;
 - (void)setPaneLayer:(HNPaneLayer)aPaneLayer {
     if (paneLayer == aPaneLayer)
         return;
+
     [[paneLayer pageView] setEditing:NO];
+
     paneLayer = aPaneLayer;
-    
+    paneLayerCopy = aPaneLayer;
     var page = [paneLayer pageView];
+
     [page setEditing:YES];
-    
-    if (paneLayer) {
-            CPLog.debug(paneLayer);
-        var frame = [page convertRect:[page bounds] toView:nil];
-        var windowSize = [[self window] frame].size;
-        [[self window] setFrameOrigin:CGPointMake(CGRectGetMidX(frame) - windowSize.width/2., CGRectGetMidY(frame))];
+
+    if (paneLayer)
+    {
+
+        var frame = [page convertRect:[page bounds] toView:nil],
+        windowSize = [[self window] frame].size;
+
+        [[self window] setFrameOrigin:
+         CGPointMake(CGRectGetMidX(frame) - 
+                     windowSize.width / 2.0, CGRectGetMidY(frame))];
     }
 }
 
 - (IBAction)scale:(id)sender {
     CPLog.debug(paneLayer);
-    [[self paneLayer] setScale:[sender doubleValue]/100.0];
+    [paneLayerCopy setScale:[sender doubleValue]/100.0];
 }
 
 - (IBAction)rotate:(id)sender {
-    [paneLayer setRotationRadians:PI/180. * [sender doubleValue]];
+    CPLog.debug(paneLayerCopy);
+    [paneLayerCopy setRotationRadians:PI/180. * [sender doubleValue]];
 }
 
 - (IBAction)updateParameters:(id)sender {

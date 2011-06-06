@@ -2,6 +2,10 @@
 ######################
 Frameworks/
 
+# xcodecapp-cocoa #
+######################
+src/main/webapp/.xCodeSupport/
+
 # Scala #
 ######################
 *.class
