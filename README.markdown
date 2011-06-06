@@ -1,6 +1,6 @@
 Introduction
 ============
-Mandelbrot is a work-in-progress, simple fractal gallery and generator that is being developed to learn more about the different aspects involved in the integration between rich internet applications (RIA) using [Cappuccino](http://cappuccino.org)/Objective-J in the client side and [Lift](http://liftweb.net)/[Scala](http://scala-lang.org/) in the server.
+Mandelbrot is a work-in-progress, simple fractal gallery and generator that is being developed to learn more about the different aspects involved in the integration between [Cappuccino](http://cappuccino.org)/Objective-J in the client side and [Lift](http://liftweb.net)/[Scala](http://scala-lang.org/) in the server.
 
 Caveat: this is an early draft of work-in-progress project.
 
