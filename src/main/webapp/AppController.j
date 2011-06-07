@@ -9,12 +9,14 @@
 @import <Foundation/CPObject.j>
 @import "HNFractalInspector.j"
 @import "HNPageView.j"
+@import "HNFractalView.j"
 
 @implementation AppController : CPObject
 {
     CPWindow    theWindow; //this "outlet" is connected automatically by the Cib
     IBOutlet HNPageView pageView @accessors;
     IBOutlet CPCollectionView fractalCollectionView;
+    CPArray images;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
@@ -26,13 +28,12 @@
     var contentView = [theWindow contentView];
     [contentView setBackgroundColor:[CPColor blackColor]];
 
-    images = [[[CPImage alloc] initWithContentsOfFile:@"Resources/FNYZQ5DQQWVUH2I3.png"
-                                                 size:CGSizeMake(512.0, 512.0)],
-              [[CPImage alloc] initWithContentsOfFile:@"Resources/FNYZQ5DQQWVUH2I3.png"
-                                                 size:CGSizeMake(512.0, 512.0)]];
-    
-    [fractalCollectionView setContent:images];
-    
+    var mainBundle = [CPBundle mainBundle];
+    var mandelbrotProxyPath = [mainBundle pathForResource:@"FNYZQ5DQQWVUH2I3.png"];
+    var mandelbrotProxyImage = [[CPImage alloc] initWithContentsOfFile:mandelbrotProxyPath
+                                                                  size:CGSizeMake(512, 512)];
+
+    [CPMenu setMenuBarVisible:NO];
 }
 
 - (void)updateWithImageUrl:(CPString)imageUrl {
@@ -45,7 +46,21 @@
 {
     // In this case, we want the window from Cib to become our full browser window
     [theWindow setFullPlatformWindow:YES];
+
     
+    [fractalCollectionView setAutoresizingMask:CPViewWidthSizable];
+    [fractalCollectionView setMinItemSize:CGSizeMake(100, 100)];
+    [fractalCollectionView setMaxItemSize:CGSizeMake(100, 100)];
+    [fractalCollectionView setDelegate:self];
+    
+    images = [[[CPImage alloc]
+               initWithContentsOfFile:"Resources/sample4.jpg"
+               size:CGSizeMake(512.0, 512.0)],
+              [[CPImage alloc]
+               initWithContentsOfFile:"Resources/sample5.jpg"
+               size:CGSizeMake(512.0, 512.0)]];
+
+    [fractalCollectionView setContent:images];
 }
 
 @end

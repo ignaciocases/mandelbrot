@@ -45,7 +45,7 @@
 		2472CA3A139CD9D800F8DE28 /* _Development_lift_integration_testing_mandelbrot_src_main_webapp_Frameworks_Debug_CommonJS_cappuccino_lib_capp_Resources_Templates_ThemeDescriptor_ThemeDescriptors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Development_lift_integration_testing_mandelbrot_src_main_webapp_Frameworks_Debug_CommonJS_cappuccino_lib_capp_Resources_Templates_ThemeDescriptor_ThemeDescriptors.h; sourceTree = "<group>"; };
 		2472CA3B139CD9D800F8DE28 /* webapp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = webapp.xcodeproj; sourceTree = "<group>"; };
 		2472CA3E139CD9D800F8DE28 /* 404.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = 404.html; path = ../404.html; sourceTree = "<group>"; };
-		2472CA3F139CD9D800F8DE28 /* AppController.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = AppController.j; path = ../AppController.j; sourceTree = "<group>"; };
+		2472CA3F139CD9D800F8DE28 /* AppController.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = AppController.j; path = ../AppController.j; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2472CA40139CD9D800F8DE28 /* capp_debug.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = capp_debug.html; path = ../capp_debug.html; sourceTree = "<group>"; };
 		2472CA41139CD9D800F8DE28 /* capp.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = capp.html; path = ../capp.html; sourceTree = "<group>"; };
 		2472CA45139CD9D900F8DE28 /* AppKit.sj */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppKit.sj; sourceTree = "<group>"; };
@@ -3185,11 +3185,11 @@
 		2472D77C139CD9DC00F8DE28 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2472D77D139CD9DC00F8DE28 /* Objective-J.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "Objective-J.js"; sourceTree = "<group>"; };
 		2472D77E139CD9DC00F8DE28 /* HNFractalInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNFractalInspector.h; path = ../HNFractalInspector.h; sourceTree = "<group>"; };
-		2472D77F139CD9DC00F8DE28 /* HNFractalInspector.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNFractalInspector.j; path = ../HNFractalInspector.j; sourceTree = "<group>"; };
+		2472D77F139CD9DC00F8DE28 /* HNFractalInspector.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNFractalInspector.j; path = ../HNFractalInspector.j; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2472D780139CD9DC00F8DE28 /* HNPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNPageView.h; path = ../HNPageView.h; sourceTree = "<group>"; };
-		2472D781139CD9DC00F8DE28 /* HNPageView.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNPageView.j; path = ../HNPageView.j; sourceTree = "<group>"; };
+		2472D781139CD9DC00F8DE28 /* HNPageView.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNPageView.j; path = ../HNPageView.j; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2472D782139CD9DC00F8DE28 /* HNPaneLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNPaneLayer.h; path = ../HNPaneLayer.h; sourceTree = "<group>"; };
-		2472D783139CD9DC00F8DE28 /* HNPaneLayer.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNPaneLayer.j; path = ../HNPaneLayer.j; sourceTree = "<group>"; };
+		2472D783139CD9DC00F8DE28 /* HNPaneLayer.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = HNPaneLayer.j; path = ../HNPaneLayer.j; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2472D785139CD9DC00F8DE28 /* ajax-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader.gif"; sourceTree = "<group>"; };
 		2472D786139CD9DC00F8DE28 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = ../index.html; sourceTree = "<group>"; };
 		2472D787139CD9DC00F8DE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };

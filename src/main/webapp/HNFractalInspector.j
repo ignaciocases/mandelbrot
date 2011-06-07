@@ -62,7 +62,6 @@ var FractalInspectorSharedInstance = nil;
 
     if (paneLayer)
     {
-
         var frame = [page convertRect:[page bounds] toView:nil],
         windowSize = [[self window] frame].size;
 
