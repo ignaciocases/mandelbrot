@@ -14,7 +14,7 @@
 {
     CPWindow    theWindow; //this "outlet" is connected automatically by the Cib
     IBOutlet HNPageView pageView @accessors;
-
+    IBOutlet CPCollectionView fractalCollectionView;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
@@ -26,7 +26,12 @@
     var contentView = [theWindow contentView];
     [contentView setBackgroundColor:[CPColor blackColor]];
 
-    //var fractalInspector = [[HNFractalInspector alloc] init];
+    images = [[[CPImage alloc] initWithContentsOfFile:@"Resources/FNYZQ5DQQWVUH2I3.png"
+                                                 size:CGSizeMake(512.0, 512.0)],
+              [[CPImage alloc] initWithContentsOfFile:@"Resources/FNYZQ5DQQWVUH2I3.png"
+                                                 size:CGSizeMake(512.0, 512.0)]];
+    
+    [fractalCollectionView setContent:images];
     
 }
 
