@@ -18,6 +18,8 @@ import net.liftweb.mapper.{OrderBy, Ascending}
 import net.liftweb.util.JSONParser._
 import net.liftweb.common.{Box,Full,Empty,Failure,ParamFailure}
 
+import java.io.InputStream
+
 object JsonVar extends SessionVar(S.functionLifespan(true){S.buildJsonFunc{
       case JsonCmd("fractal", _, s: String, _) => {
 				// Parse the incoming parameters
@@ -35,7 +37,7 @@ object JsonVar extends SessionVar(S.functionLifespan(true){S.buildJsonFunc{
 				
 				// Creates the Mandelbrot render
 				val mandelData = FractalImage.drawMandelbrot(pMin, pMax, qMin, qMax)
-
+				
 				// Transform to byte array
 				val baos = new java.io.ByteArrayOutputStream
 				javax.imageio.ImageIO.write(mandelData, "png", baos)
@@ -48,7 +50,7 @@ object JsonVar extends SessionVar(S.functionLifespan(true){S.buildJsonFunc{
 				// Sends back to the client the image url
 				val imageUrl = Image.findAll(OrderBy(Image.saveTime, Ascending)).last.imageLocation
 				
-        JsRaw("""imageCallback("""+("http://localhost:8080"+imageUrl).encJs+""");""")
+				        JsRaw("""imageCallback("""+("http://localhost:8080"+imageUrl).encJs+""");""")
 			}
 
       case x =>

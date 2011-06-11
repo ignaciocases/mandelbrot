@@ -72,12 +72,10 @@ var FractalInspectorSharedInstance = nil;
 }
 
 - (IBAction)scale:(id)sender {
-    CPLog.debug(paneLayer);
     [paneLayerCopy setScale:[sender doubleValue]/100.0];
 }
 
 - (IBAction)rotate:(id)sender {
-    CPLog.debug(paneLayerCopy);
     [paneLayerCopy setRotationRadians:PI/180. * [sender doubleValue]];
 }
 
@@ -92,4 +90,17 @@ var FractalInspectorSharedInstance = nil;
     retrieveImageUrl(parametersJson);
 }
 
+- (void)updateWithImageUrl:(CPString)imageUrl {
+    imageFromServer = [[CPImage alloc] initWithContentsOfFile:imageUrl size:CGSizeMake(1024, 1024)];
+    //CPLog.debug(imageUrl);
+    //    [imageView setImage:image1];
+    
+    [paneLayer setImage:imageFromServer];
+}
+
 @end
+
+
+function imageCallback(imageUrl) {
+    [FractalInspectorSharedInstance updateWithImageUrl:imageUrl];
+}

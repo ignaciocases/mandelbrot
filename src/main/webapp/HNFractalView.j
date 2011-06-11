@@ -22,16 +22,18 @@
 }
 
 - (void)setSelected:(BOOL)isSelected {
-
-    [self setBackgroundColor:isSelected ? 
-     [CPColor colorWithCalibratedRed:0.357 green:0.627 blue:0.851 alpha:1.000]                               : nil];
+    var blue = [CPColor colorWithCalibratedRed:0.357 green:0.627 blue:0.851 alpha:1.000];
+    [self setBackgroundColor:isSelected ? blue : nil];
 }
 
-- (void)mouseDown:(CPEvent)anEvent {
-    if ([anEvent clickCount] == 2) {
-        CPLog.debug(@"%@");
-    }
-}
+//- (void)mouseDown:(CPEvent)anEvent {
+//    if ([anEvent clickCount] == 2) {
+//        CPLog.debug(@"%@", delegate);
+//        if ([delegate respondsToSelector:@selector(hi:)]) {
+//            [delegate performSelector:@selector(hi:)];
+//        }
+//    }
+//}
 
 - (id)initWithCoder:(CPCoder)aCoder {
     self = [super initWithCoder:aCoder];

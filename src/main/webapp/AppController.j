@@ -36,12 +36,6 @@
     [CPMenu setMenuBarVisible:NO];
 }
 
-- (void)updateWithImageUrl:(CPString)imageUrl {
-//    image1 = [[CPImage alloc] initWithContentsOfFile:imageUrl size:CGSizeMake(1024, 1024)];
-//    CPLog.debug(imageUrl);
-//    [imageView setImage:image1];
-}
-
 - (void)awakeFromCib
 {
     // In this case, we want the window from Cib to become our full browser window
@@ -64,7 +58,3 @@
 }
 
 @end
-
-function imageCallback(imageUrl) {
-    [AppController.instance updateWithImageUrl:imageUrl];
-}
